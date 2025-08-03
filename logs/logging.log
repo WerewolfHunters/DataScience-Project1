@@ -1,0 +1,331 @@
+[2025-08-01 19:54:27,486: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-01 19:54:27,486: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-01 19:54:27,486: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-01 19:54:27,486: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-01 19:54:27,486: INFO: common: Created directory at: artifacts]
+[2025-08-01 19:54:27,486: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-01 19:54:28,459: INFO: data_ingestion: artifacts/data_ingestion/data.zip downloaded! with the following info: 
+Date: Fri, 01 Aug 2025 14:27:08 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+x-repository-download: git clone https://github.com/krishnaik06/datasets.git
+x-raw-download: https://raw.githubusercontent.com/krishnaik06/datasets/main/winequality-data.zip
+ETag: W/"03182c0e8c6dbc7a424a19381a7f2e0a"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Server: github.com
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=3ST%2BIgPexvTgxO21tZS1ISNdpFDituSJm3uwOzCZ30ad%2BMObFmrwq37l0xRxfnrDA%2FS8mBmooM23Lwj%2B6ejlkU%2BihMDrZc5vP3ZLD1O7%2BYeahNUvcHdEekHbhd89CTc%2F93rR4sp7FSblJqCicmxnnxBxF%2FaXjxraN%2BxfRa2q3l0QdZhxGw0SP5e0USJ3MwaD61YD0GkXTq11et6y1m58GOGS9bTeXJzqIeL7vNql39KBkEMZx3v9KaSlPS52z6xQuDQTH6ZKZ5Z6VKaay4TX1Q%3D%3D--fNh%2BXqA4ReADWS%2Fi--6OW0vWF5%2FePNywWH6JG0Cg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.2128517859.1754058428; Path=/; Domain=github.com; Expires=Sat, 01 Aug 2026 14:27:08 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Sat, 01 Aug 2026 14:27:08 GMT; HttpOnly; Secure; SameSite=Lax
+X-GitHub-Request-Id: 1146:2F730B:200607:24B7D7:688CCEBC
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-01 19:54:28,459: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 9, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 18, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 34, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Program Files\Python310\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Program Files\Python310\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-08-01 20:06:30,016: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-01 20:06:30,016: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-01 20:06:30,016: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-01 20:06:30,016: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-01 20:06:30,016: INFO: common: Created directory at: artifacts]
+[2025-08-01 20:06:30,030: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-01 20:06:32,200: INFO: data_ingestion: artifacts/data_ingestion/data.zip downloaded! with the following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 5EB3:3616D2:3B15F:74BC8:688CD18D
+Accept-Ranges: bytes
+Date: Fri, 01 Aug 2025 14:39:12 GMT
+Via: 1.1 varnish
+X-Served-By: cache-hyd1100033-HYD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1754059153.642930,VS0,VE275
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 2b033fa3447004923658147c04849bffffab8197
+Expires: Fri, 01 Aug 2025 14:44:12 GMT
+Source-Age: 0
+
+]
+[2025-08-01 20:06:32,216: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-01 21:45:39,802: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-01 21:45:39,803: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-01 21:45:39,805: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-01 21:45:39,805: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-01 21:45:39,810: INFO: common: Created directory at: artifacts]
+[2025-08-01 21:45:39,811: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-01 21:45:39,811: ERROR: main: local variable 'filename' referenced before assignment]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 22, in download_file
+    logger.info(f"{filename} already exists")
+UnboundLocalError: local variable 'filename' referenced before assignment
+[2025-08-03 20:43:05,422: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:43:05,424: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:43:05,427: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:43:05,427: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:43:05,427: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:43:05,431: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:43:05,431: ERROR: main: local variable 'filename' referenced before assignment]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 22, in download_file
+    logger.info(f"{filename} already exists")
+UnboundLocalError: local variable 'filename' referenced before assignment
+[2025-08-03 20:45:19,553: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:45:19,553: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:45:19,553: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:45:19,567: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:45:19,567: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:45:19,567: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:45:19,567: ERROR: main: name 'filename' is not defined]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 23, in download_file
+    logger.info(f"{filename} already exists")
+NameError: name 'filename' is not defined
+[2025-08-03 20:45:42,746: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:45:42,746: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:45:42,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:45:42,746: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:45:42,761: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:45:42,761: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:45:42,761: ERROR: main: local variable 'filename' referenced before assignment]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 23, in download_file
+    logger.info(f"{filename} already exists")
+UnboundLocalError: local variable 'filename' referenced before assignment
+[2025-08-03 20:46:00,137: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:46:00,137: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:46:00,137: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:46:00,137: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:46:00,137: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:46:00,137: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:46:00,137: ERROR: main: local variable 'filename' referenced before assignment]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 23, in download_file
+    logger.info(f"{filename} already exists")
+UnboundLocalError: local variable 'filename' referenced before assignment
+[2025-08-03 20:46:19,962: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:46:19,962: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:46:19,970: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:46:19,970: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:46:19,970: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:46:19,970: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:46:19,970: ERROR: main: local variable 'filename' referenced before assignment]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 10, in <module>
+    obj.initiate_data_ingestion()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_ingestion.py", line 22, in download_file
+    logger.info(f"{filename} already exists")
+UnboundLocalError: local variable 'filename' referenced before assignment
+[2025-08-03 20:47:41,294: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:47:41,294: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:47:41,294: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:47:41,294: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:47:41,294: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:47:41,294: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:47:41,310: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:47:41,318: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:47:41,319: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:47:41,321: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:47:41,322: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:47:41,324: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:47:41,325: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:47:41,325: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:47:41,327: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_validation/winequality-red.csv']
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 24, in <module>
+    obj.initiate_data_validation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_validation_pipeline.py", line 17, in initiate_data_validation
+    data_ingestion.validate_all_columns()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_validation.py", line 36, in validate_all_columns
+    raise e
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_validation.py", line 17, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_validation/winequality-red.csv'
+[2025-08-03 20:49:10,096: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:49:10,096: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:49:10,096: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:49:10,096: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:49:10,096: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:49:10,096: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:49:10,096: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:49:10,104: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:49:10,105: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:49:10,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:49:10,109: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:49:10,111: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:49:10,111: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:49:10,112: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:49:10,150: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:52:00,405: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:52:00,410: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:52:00,429: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:52:00,439: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:52:00,439: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:52:00,439: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:52:00,439: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:52:00,456: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:52:00,456: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:52:00,458: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:52:00,460: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:52:00,462: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:52:00,464: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:52:00,465: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:52:00,506: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:52:00,506: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:52:00,506: ERROR: main: not readable]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 39, in <module>
+    obj.initiate_data_transformation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 26, in initiate_data_transformation
+    raise e
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    status = f.read().split(" ")[-1]
+io.UnsupportedOperation: not readable
+[2025-08-03 20:53:12,445: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:53:12,445: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:53:12,445: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:53:12,445: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:53:12,445: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:53:12,445: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:53:12,445: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:53:12,470: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:53:12,471: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:53:12,472: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:53:12,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:53:12,475: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:53:12,475: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:53:12,476: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:53:12,491: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:53:12,491: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:53:12,497: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:53:12,497: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:53:12,497: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:53:12,497: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:53:12,503: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-03 20:53:12,504: ERROR: main: 'NoneType' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 39, in <module>
+    obj.initiate_data_transformation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 26, in initiate_data_transformation
+    raise e
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 21, in initiate_data_transformation
+    obj.train_test_splitting()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_transformation.py", line 13, in train_test_splitting
+    data = pd.read_csv(self.config.data_path)
+AttributeError: 'NoneType' object has no attribute 'data_path'
+[2025-08-03 20:55:13,739: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:13,739: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:13,739: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:13,739: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:13,739: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:13,739: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:55:13,739: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:55:13,748: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:55:13,748: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:13,752: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:13,753: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:13,755: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:13,756: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:13,757: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:55:13,779: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:55:13,779: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:13,779: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:13,779: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:13,786: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:13,786: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:13,786: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-03 20:55:13,786: ERROR: main: 'NoneType' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 39, in <module>
+    obj.initiate_data_transformation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 26, in initiate_data_transformation
+    raise e
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\data_transformation_pipeline.py", line 21, in initiate_data_transformation
+    obj.train_test_splitting()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\data_transformation.py", line 13, in train_test_splitting
+    data = pd.read_csv(self.config.data_path)
+AttributeError: 'NoneType' object has no attribute 'data_path'
+[2025-08-03 20:55:50,112: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:50,112: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:50,127: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:50,127: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:50,133: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:50,134: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-03 20:55:50,134: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-03 20:55:50,141: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:55:50,141: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:50,143: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:50,145: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:50,149: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:50,150: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:50,151: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-03 20:55:50,186: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-03 20:55:50,186: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-03 20:55:50,189: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-03 20:55:50,190: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-03 20:55:50,192: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-03 20:55:50,192: INFO: common: Created directory at: artifacts]
+[2025-08-03 20:55:50,193: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-03 20:55:50,230: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-03 20:55:50,230: INFO: data_transformation: (1199, 12)]
+[2025-08-03 20:55:50,230: INFO: data_transformation: (400, 12)]
+[2025-08-03 20:55:50,230: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
