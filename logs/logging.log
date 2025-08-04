@@ -329,3 +329,284 @@ AttributeError: 'NoneType' object has no attribute 'data_path'
 [2025-08-03 20:55:50,230: INFO: data_transformation: (1199, 12)]
 [2025-08-03 20:55:50,230: INFO: data_transformation: (400, 12)]
 [2025-08-03 20:55:50,230: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:34:19,133: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-04 18:34:19,133: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:34:19,133: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:34:19,133: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:34:19,133: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:34:19,133: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-04 18:34:19,133: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-04 18:34:19,149: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:34:19,149: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:34:19,151: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:34:19,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:34:19,154: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:34:19,155: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:34:19,155: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-04 18:34:19,184: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:34:19,184: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:34:19,192: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:34:19,192: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:34:19,192: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:34:19,192: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:34:19,192: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-04 18:34:19,232: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-04 18:34:19,232: INFO: data_transformation: (1199, 12)]
+[2025-08-04 18:34:19,233: INFO: data_transformation: (400, 12)]
+[2025-08-04 18:34:19,234: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:34:19,235: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-04 18:34:19,235: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:34:19,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:34:19,239: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:34:19,240: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:34:19,243: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-04 18:34:19,244: ERROR: main: "'ConfigBox' object has no attribute 'name'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 55, in <module>
+    obj.initiate_model_trainer()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\config\configuration.py", line 71, in get_model_trainer_config
+    target_column=schema.name
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'name'"
+[2025-08-04 18:35:12,484: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:12,484: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:12,484: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:12,500: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:12,500: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:12,500: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-04 18:35:12,500: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-04 18:35:12,500: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:12,500: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:12,506: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:12,509: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:12,510: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:12,512: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:12,513: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-04 18:35:12,534: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:12,534: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:12,539: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:12,540: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:12,543: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:12,543: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:12,543: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-04 18:35:12,575: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-04 18:35:12,575: INFO: data_transformation: (1199, 12)]
+[2025-08-04 18:35:12,575: INFO: data_transformation: (400, 12)]
+[2025-08-04 18:35:12,575: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:12,575: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:12,582: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:12,582: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:12,585: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:12,587: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:12,587: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-04 18:35:12,596: ERROR: main: unhashable type: "Box"]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 55, in <module>
+    obj.initiate_model_trainer()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\model_trainer.py", line 19, in train
+    train_x = train_data.drop(columns=[self.config.target_column], axis=1)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\frame.py", line 5588, in drop
+    return super().drop(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4807, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4849, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 7132, in drop
+    indexer = self.get_indexer_for(labels)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 6194, in get_indexer_for
+    return self.get_indexer(target)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 3960, in get_indexer
+    return self._get_indexer(target, method, limit, tolerance)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 3987, in _get_indexer
+    indexer = self._engine.get_indexer(tgt_values)
+  File "pandas/_libs/index.pyx", line 351, in pandas._libs.index.IndexEngine.get_indexer
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7139, in pandas._libs.hashtable.PyObjectHashTable.lookup
+  File "box\\box.py", line 385, in box.box.Box.__hash__
+box.exceptions.BoxTypeError: unhashable type: "Box"
+[2025-08-04 18:35:50,210: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:50,213: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:50,213: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:50,216: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:50,216: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:50,216: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-04 18:35:50,216: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-04 18:35:50,221: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:50,222: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:50,225: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:50,226: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:50,229: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:50,233: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:50,233: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-04 18:35:50,247: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:50,247: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:50,256: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:50,257: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:50,259: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:50,259: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:50,261: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-04 18:35:50,281: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-04 18:35:50,281: INFO: data_transformation: (1199, 12)]
+[2025-08-04 18:35:50,281: INFO: data_transformation: (400, 12)]
+[2025-08-04 18:35:50,285: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:35:50,285: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-04 18:35:50,287: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:35:50,288: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:35:50,289: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:35:50,289: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:35:50,289: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-04 18:35:50,295: ERROR: main: unhashable type: "Box"]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 55, in <module>
+    obj.initiate_model_trainer()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\model_trainer.py", line 19, in train
+    train_x = train_data.drop(columns=[self.config.target_column], axis=1)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\frame.py", line 5588, in drop
+    return super().drop(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4807, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4849, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 7132, in drop
+    indexer = self.get_indexer_for(labels)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 6194, in get_indexer_for
+    return self.get_indexer(target)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 3960, in get_indexer
+    return self._get_indexer(target, method, limit, tolerance)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 3987, in _get_indexer
+    indexer = self._engine.get_indexer(tgt_values)
+  File "pandas/_libs/index.pyx", line 351, in pandas._libs.index.IndexEngine.get_indexer
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7139, in pandas._libs.hashtable.PyObjectHashTable.lookup
+  File "box\\box.py", line 385, in box.box.Box.__hash__
+box.exceptions.BoxTypeError: unhashable type: "Box"
+[2025-08-04 18:36:30,113: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-04 18:36:30,113: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:36:30,113: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:36:30,113: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:36:30,113: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:36:30,113: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-04 18:36:30,113: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-04 18:36:30,125: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:36:30,125: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:36:30,125: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:36:30,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:36:30,130: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:36:30,137: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:36:30,138: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-04 18:36:30,158: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:36:30,158: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:36:30,158: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:36:30,165: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:36:30,165: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:36:30,165: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:36:30,165: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-04 18:36:30,194: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-04 18:36:30,199: INFO: data_transformation: (1199, 12)]
+[2025-08-04 18:36:30,200: INFO: data_transformation: (400, 12)]
+[2025-08-04 18:36:30,201: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:36:30,201: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-04 18:36:30,206: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:36:30,208: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:36:30,211: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:36:30,212: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:36:30,213: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-04 18:36:30,223: ERROR: main: "['int64'] not found in axis"]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 55, in <module>
+    obj.initiate_model_trainer()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\model_trainer.py", line 19, in train
+    train_x = train_data.drop(columns=[self.config.target_column], axis=1)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\frame.py", line 5588, in drop
+    return super().drop(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4807, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\generic.py", line 4849, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['int64'] not found in axis"
+[2025-08-04 18:40:40,827: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-04 18:40:40,827: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:40:40,827: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:40:40,827: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:40:40,827: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:40:40,827: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-04 18:40:40,827: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-04 18:40:40,836: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:40:40,836: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:40:40,838: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:40:40,840: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:40:40,840: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:40:40,840: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:40:40,847: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-04 18:40:40,864: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:40:40,865: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-04 18:40:40,867: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:40:40,869: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:40:40,869: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:40:40,869: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:40:40,869: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-04 18:40:40,889: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-04 18:40:40,889: INFO: data_transformation: (1199, 12)]
+[2025-08-04 18:40:40,889: INFO: data_transformation: (400, 12)]
+[2025-08-04 18:40:40,896: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-04 18:40:40,896: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-04 18:40:40,896: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-04 18:40:40,896: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-04 18:40:40,902: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-04 18:40:40,903: INFO: common: Created directory at: artifacts]
+[2025-08-04 18:40:40,903: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-04 18:40:40,931: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE ended <<<<<<<<<<]
