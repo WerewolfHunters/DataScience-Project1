@@ -10,10 +10,6 @@ import mlflow.sklearn
 import joblib
 import os
 
-# os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/awwab.mahimi.0074/DataScience-Project1.mlflow"
-# os.environ["MLFLOW_TRACKING_USERNAME"] = "awwab.mahimi.0074"
-# os.environ["MLFLOW_TRACKING_PASSWORD"] = "4bb51e3b741fcc4b623443c3d460b0ea2b062440"
-
 class ModelEvaluation:
     def __init__(self, config: ModelEvaluationConfig):
         self.config = config
