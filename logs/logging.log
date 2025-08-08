@@ -610,3 +610,179 @@ KeyError: "['int64'] not found in axis"
 [2025-08-04 18:40:40,903: INFO: common: Created directory at: artifacts]
 [2025-08-04 18:40:40,903: INFO: common: Created directory at: artifacts/model_trainer]
 [2025-08-04 18:40:40,931: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE ended <<<<<<<<<<]
+[2025-08-09 01:09:29,682: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-09 01:09:29,682: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:09:29,682: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:09:29,682: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:09:29,682: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:09:29,682: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-09 01:09:29,682: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-09 01:09:29,700: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:09:29,700: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:09:29,704: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:09:29,706: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:09:29,708: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:09:29,708: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:09:29,709: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-09 01:09:29,779: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:09:29,785: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:09:29,786: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:09:29,786: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:09:29,803: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:09:29,804: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:09:29,804: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-09 01:09:29,855: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-09 01:09:29,856: INFO: data_transformation: (1199, 12)]
+[2025-08-09 01:09:29,856: INFO: data_transformation: (400, 12)]
+[2025-08-09 01:09:29,857: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:09:29,857: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-09 01:09:29,860: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:09:29,862: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:09:29,864: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:09:29,866: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:09:29,866: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-09 01:09:29,896: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE ended <<<<<<<<<<]
+[2025-08-09 01:09:29,896: INFO: main: >>>>>>>>>> stage: MODEL EVALUATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:09:29,898: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:09:29,899: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:09:29,901: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:09:29,902: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:09:29,902: INFO: common: Created directory at: artifacts/model_evaluation]
+[2025-08-09 01:09:32,112: INFO: common: Json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-08-09 01:09:37,526: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 69, in <module>
+    obj.initiate_model_evaluation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\model_evaluation.py", line 53, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticNetModel")
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\client.py", line 5369, in create_logged_model
+    return self._tracking_client.create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 594, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 308, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-08-09 01:13:27,500: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-09 01:13:27,515: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:13:27,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:13:27,516: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:13:27,516: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:13:27,516: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-09 01:13:27,516: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-09 01:13:27,516: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:13:27,516: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:13:27,530: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:13:27,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:13:27,530: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:13:27,530: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:13:27,530: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-09 01:13:27,569: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:13:27,569: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:13:27,577: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:13:27,577: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:13:27,582: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:13:27,583: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:13:27,584: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-09 01:13:27,616: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-09 01:13:27,616: INFO: data_transformation: (1199, 12)]
+[2025-08-09 01:13:27,616: INFO: data_transformation: (400, 12)]
+[2025-08-09 01:13:27,618: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:13:27,618: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-09 01:13:27,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:13:27,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:13:27,624: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:13:27,627: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:13:27,628: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-09 01:13:27,646: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE ended <<<<<<<<<<]
+[2025-08-09 01:13:27,646: INFO: main: >>>>>>>>>> stage: MODEL EVALUATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:13:27,646: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:13:27,653: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:13:27,653: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:13:27,653: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:13:27,653: INFO: common: Created directory at: artifacts/model_evaluation]
+[2025-08-09 01:13:29,223: INFO: common: Json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-08-09 01:13:34,655: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\main.py", line 69, in <module>
+    obj.initiate_model_evaluation()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\src\datascience\components\model_evaluation.py", line 52, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\client.py", line 5369, in create_logged_model
+    return self._tracking_client.create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 594, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\MLOPs\Krish Naik\DataScience-Project1\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 308, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-08-09 01:14:01,850: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE started <<<<<<<<<<]
+[2025-08-09 01:14:01,850: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:14:01,850: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:14:01,850: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:14:01,850: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:14:01,850: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-08-09 01:14:01,850: INFO: data_ingestion: artifacts/data_ingestion/data.zip already exists]
+[2025-08-09 01:14:01,850: INFO: main: >>>>>>>>>> stage: DATA INGESTION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:14:01,850: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:14:01,868: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:14:01,869: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:14:01,871: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:14:01,873: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:14:01,874: INFO: common: Created directory at: artifacts/data_validation]
+[2025-08-09 01:14:01,893: INFO: main: >>>>>>>>>> stage: DATA VALIDATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:14:01,893: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:14:01,900: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:14:01,900: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:14:01,900: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:14:01,907: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:14:01,908: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-08-09 01:14:01,929: INFO: data_transformation: Splitted dataset into training and test set]
+[2025-08-09 01:14:01,929: INFO: data_transformation: (1199, 12)]
+[2025-08-09 01:14:01,929: INFO: data_transformation: (400, 12)]
+[2025-08-09 01:14:01,929: INFO: main: >>>>>>>>>> stage: DATA TRANSFORMATION STAGE ended <<<<<<<<<<]
+[2025-08-09 01:14:01,929: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE started <<<<<<<<<<]
+[2025-08-09 01:14:01,935: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:14:01,937: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:14:01,938: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:14:01,939: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:14:01,940: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-08-09 01:14:01,956: INFO: main: >>>>>>>>>> stage: MODEL TRAINING STAGE ended <<<<<<<<<<]
+[2025-08-09 01:14:01,956: INFO: main: >>>>>>>>>> stage: MODEL EVALUATION STAGE started <<<<<<<<<<]
+[2025-08-09 01:14:01,956: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-09 01:14:01,956: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-09 01:14:01,963: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-09 01:14:01,966: INFO: common: Created directory at: artifacts]
+[2025-08-09 01:14:01,967: INFO: common: Created directory at: artifacts/model_evaluation]
+[2025-08-09 01:14:03,477: INFO: common: Json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-08-09 01:14:09,644: INFO: main: >>>>>>>>>> stage: MODEL EVALUATION STAGE ended <<<<<<<<<<]
